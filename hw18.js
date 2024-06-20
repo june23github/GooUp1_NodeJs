@@ -3,17 +3,17 @@ function getInfoUser(user) {
     console.log(name, age, gender);
 }
 
-// getInfoUser({
-//     name: "Le Hoang Linh",
-//     age: 20,
-//     gender: 'Male'
-// });
+getInfoUser({
+    name: "Le Hoang Linh",
+    age: 20,
+    gender: 'Male'
+});
 
 
-// function logger(...input){
-//     return input.join('|');
-// }
-// console.log(logger('hello', 'world', 'this', 'is', 'a', 'test'))
+function logger(...input){
+    return input.join('|');
+}
+console.log(logger('hello', 'world', 'this', 'is', 'a', 'test'))
 
 const url = 'https://dummyjson.com/carts'
 async function fetchProducts(url) {
