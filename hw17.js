@@ -19,7 +19,7 @@ Promise.all(promises)
     .catch(err => console.log('At least 1 promise reject'))
     .finally(() => console.log('All promises finished'))
 
-// async function handlePromises(){
+// async function handlePromises    (){
 //     let count = 1;
 //     for (let promise of promises) {
 //         let currentCount = count;
