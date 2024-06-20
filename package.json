@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "readline-sync": "^1.4.10",
+    "uuid": "^10.0.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

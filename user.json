@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Alex",
+    "role": "client",
+    "gender": "male",
+    "nationality": "Singapore"
+  },
+  {
+    "id": 2,
+    "name": "Kris",
+    "role": "admin",
+    "gender": "male",
+    "nationality": "Singapore"
+  },
+  {
+    "id": 3,
+    "name": "Linh",
+    "role": "admin",
+    "gender": "male",
+    "nationality": "VietNam"
+  },
+  {
+    "id": "4",
+    "name": "PVL",
+    "role": "client",
+    "gender": "male",
+    "nationality": "VietNam"
+  }
+]
