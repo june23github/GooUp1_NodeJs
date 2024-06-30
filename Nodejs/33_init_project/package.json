@@ -1,0 +1,15 @@
+{
+  "name": "33_init_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Hoang Linh",
+  "license": "ISC",
+  "description": "This is my project",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
