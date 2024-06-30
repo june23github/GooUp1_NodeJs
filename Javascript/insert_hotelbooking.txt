@@ -1,0 +1,139 @@
+db.
+
+db.createCollection(‘users’);
+db.createCollection(‘hotels);
+db.createCollection(‘rooms’);
+db.createCollection(‘reservations’);
+db.createCollection(‘reviews’);
+
+db.users.insertMany([
+    {
+        name: "John Doe",
+        phone: "123-456-7890",
+        address: "123 Elm Street, Springfield, IL",
+        email: "john.doe@example.com",
+        password: "securepassword"
+    },
+    {
+        name: "Jane Smith",
+        phone: "987-654-3210",
+        address: "456 Oak Avenue, Springfield, IL",
+        email: "jane.smith@example.com",
+        password: "anothersecurepassword"
+    },
+    {
+        name: "Alice Johnson",
+        phone: "555-123-4567",
+        address: "789 Pine Road, Springfield, IL",
+        email: "alice.johnson@example.com",
+        password: "yetanothersecurepassword"
+    }
+]);
+
+
+db.hotels.insertMany([
+    {
+        _id: ObjectId(),
+        name: "Hotel California",
+        address: "42 Sunset Boulevard, Los Angeles, CA",
+        description: "A lovely place",
+        owner_id: ObjectId("667e3c0e44d030562b2c6ab5")
+    },
+    {
+        _id: ObjectId(),
+        name: "The Grand Budapest Hotel",
+        address: "1 Grand Avenue, Zubrowka",
+        description: "A legendary hotel",
+        owner_id: ObjectId("667e3c0e44d030562b2c6ab5 ")
+    }
+]);
+
+
+db.rooms.insertMany([
+    {
+        _id: ObjectId(),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac0"),
+        name: "Suite 101",
+        area: "500 sqft",
+        floor: 1,
+        type: "suite",
+        status: "available",
+        price: 150
+    },
+    {
+        _id: ObjectId(),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac0"),
+        name: "Deluxe Room 102",
+        area: "400 sqft",
+        floor: 1,
+        type: "deluxe",
+        status: "booked",
+        price: 120
+    },
+    {
+        _id: ObjectId(),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac1"),
+        name: "Penthouse 202",
+        area: "1000 sqft",
+        floor: 2,
+        type: "penthouse",
+        status: "available",
+        price: 300
+    }
+]);
+
+
+
+db.reservations.insertMany([
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab6"),
+        room_id: ObjectId("667e3ec344d030562b2c6ac5"),
+        checkin_date: ISODate("2023-07-01T00:00:00Z"),
+        checkout_date: ISODate("2023-07-05T00:00:00Z")
+    },
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab6"),
+        room_id: ObjectId("667e3ec344d030562b2c6ac6"), 
+        checkin_date: ISODate("2023-07-10T00:00:00Z"),
+        checkout_date: ISODate("2023-07-15T00:00:00Z")
+    },
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab7"),
+        room_id: ObjectId("667e3ec344d030562b2c6ac7"),
+        checkin_date: ISODate("2023-08-01T00:00:00Z"),
+        checkout_date: ISODate("2023-08-05T00:00:00Z")
+    }
+]);
+
+
+
+
+db.reviews.insertMany([
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab6"),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac0"),
+        rating: 5,
+        comment: "Amazing experience!",
+        review_date: ISODate("2023-07-06T00:00:00Z")
+    },
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab6"),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac0"),
+        rating: 4,
+        comment: "Very good, but a bit expensive.",
+        review_date: ISODate("2023-07-16T00:00:00Z")
+    },
+    {
+        _id: ObjectId(),
+        user_id: ObjectId("667e3c0e44d030562b2c6ab7"),
+        hotel_id: ObjectId("667e3db844d030562b2c6ac1"),
+        rating: 3,
+        comment: "Good location, but the service could be better.",
+        review_date: ISODate("2023-08-06T00:00:00Z")
+    }
+]);
