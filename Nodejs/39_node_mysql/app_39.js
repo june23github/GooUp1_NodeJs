@@ -17,7 +17,6 @@ con.connect(function(err) {
 });
 
 app.get('/users', (req, res) => {
-    const id = req.params.id;
     const query = 'select * from users';
     con.query(query, (err, result) => {
         if (err) throw err;
@@ -26,7 +25,6 @@ app.get('/users', (req, res) => {
     });
 })
 app.get('/hotels', (req, res) => {
-    const id = req.params.id;
     const query = 'select * from hotels';
     con.query(query, (err, result) => {
         if (err) throw err;
