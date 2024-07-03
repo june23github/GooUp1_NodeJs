@@ -5,7 +5,7 @@ const helmet = require('helmet')
 
 const corsOptions = {
     origin: '*',
-    methods: ['GET', 'POST'], // Chỉ cho phép các phương thức này
+    methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 
 }
