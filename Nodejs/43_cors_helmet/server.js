@@ -7,7 +7,6 @@ const corsOptions = {
     origin: '*',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-
 }
 
 const PORT = 5000;
@@ -27,8 +26,7 @@ app.get('/', (req, res) => {
         res.status(400).json({
             message: "No data received"
         })
-    }
-    
+    } 
 })
 
 app.listen(PORT, () => {
