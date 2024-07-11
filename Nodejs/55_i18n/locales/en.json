@@ -1,0 +1,22 @@
+{
+    "Hello": "Hello",
+    "Welcome": "Welcome to our application",
+    "Goodbye": "Goodbye",
+    "ThankYou": "Thank you",
+    "Yes": "Yes",
+    "No": "No",
+    "Login": "Login",
+    "Register": "Register",
+    "Email": "Email",
+    "Password": "Password",
+    "Username": "Username",
+    "Submit": "Submit",
+    "Cancel": "Cancel",
+    "Profile": "Profile",
+    "Settings": "Settings",
+    "Logout": "Logout",
+    "Home": "Home",
+    "About": "About",
+    "Contact": "Contact",
+    "Help": "Help"
+  }
