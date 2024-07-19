@@ -6,7 +6,7 @@ module.exports = [
     languageOptions: {
       // specify globals here if needed
       globals: {
-        // Your global variables, e.g., "React": "writable"
+        // global variables, e.g., "React": "writable"
       },
     },
     rules: {
