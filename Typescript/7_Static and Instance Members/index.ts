@@ -16,7 +16,7 @@ class MyClass {
 
 
 let instance1 = new MyClass("Instance1");
-// instance1.instanceCount = 1;
+//  instance1.count = 1;
 
 MyClass.displayStaticCount();
 
