@@ -10,7 +10,7 @@ abstract class User {
     }
   
     public abstract getRole(): string;
-  }
+}
   
 class Admin extends User {
     public getRole(): string {

@@ -1,6 +1,12 @@
-function configurable(value: boolean) {
+function can_get(value: boolean) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-      descriptor.configurable = value;
+      descriptor.get = function() {
+        if (value){
+          return 'can get this property';
+        }else{
+          return 'Can not get this property';
+        }
+      }
     };
 }
   
@@ -13,12 +19,12 @@ class Point {
       this._y = y;
     }
   
-    @configurable(false)
+    @can_get(false)
     get x() {
       return this._x;
     }
   
-    @configurable(false)
+    @can_get(true)
     get y() {
       return this._y;
     }

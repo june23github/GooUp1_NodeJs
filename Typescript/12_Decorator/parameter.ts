@@ -1,25 +1,19 @@
 function logParameter(target: any, propertyKey: string, parameterIndex: number) {
-    const metadataKey = `log_${propertyKey}_parameters`;
+    console.log(target, propertyKey, parameterIndex);
+}
   
-    if (Array.isArray(target[metadataKey])) {
-      target[metadataKey].push(parameterIndex);
-    } else {
-      target[metadataKey] = [parameterIndex];
-    }
-  }
-  
-  class Greeter4 {
-    greeting: string;
+  class Phone {
+    namePhone: string;
     
-    constructor(message: string) {
-      this.greeting = message;
+    constructor(name: string) {
+      this.namePhone = name;
     }
   
-    greet(@logParameter name: string) {
-      return `Hello, ${name} and ${this.greeting}`;
+    owner(@logParameter name: string) {
+      return `This phone belongs to ${name} `;
     }
   }
   
-  const greeter2 = new Greeter4("world");
-  console.log(greeter2.greet("John"));
+  const phone = new Phone("world");
+  console.log(phone.owner('June'));
   

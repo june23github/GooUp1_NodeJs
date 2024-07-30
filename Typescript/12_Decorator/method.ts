@@ -1,17 +1,27 @@
-function enumerable(value: boolean) {
+function upperCase(value: string) {
     return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-      descriptor.enumerable = value;
+      console.log(target[propertyKey]);
+         
+      descriptor.value = function(): string {
+        return value.toUpperCase();
+      }
+
     };
   }
   
-class Greeter2 {
-    greeting: string;
-    constructor(message: string) {
-      this.greeting = message;
+class Car {
+    name: string;
+    constructor(name: string) {
+      this.name = name;
     }
   
-    @enumerable(false)
-    greet() {
-      return "Hello, " + this.greeting;
+    @upperCase('abc')
+    get_name(): string {
+      return "Hello, " + this.name;
     }
 }
+
+
+const car = new Car('BMW');
+
+console.log(car.get_name());

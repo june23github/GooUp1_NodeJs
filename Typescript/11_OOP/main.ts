@@ -10,7 +10,7 @@ class Animal {
     public makeSound(): void {
       console.log("Some generic animal sound");
     }
-  }
+}
   
 class Dog extends Animal {
     public makeSound(): void {

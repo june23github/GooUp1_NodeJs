@@ -1,20 +1,24 @@
-function sealed(constructor: Function) {
-    Object.seal(constructor);
-    Object.seal(constructor.prototype);
-}
-  
-@sealed
-class Greeter {
-    greeting: string;   
-    constructor(message: string) {
-        this.greeting = message;
-    }
+// function sealed(constructor: Function) {
+//     Object.seal(constructor);
+//     Object.seal(constructor.prototype);
+// }
 
-    greet() {
-        return `Hello, ${this.greeting}`;
+function addProperty<T extends { new (...arg: any[]) : {} }>(id: number){
+    return function (constructor: T) {
+        return class extends constructor {
+            id: number = id;
+        }
     }
 }
-  
-const greeter = new Greeter("world");
 
-console.log(greeter.greet());
+  
+@addProperty(23)
+class Student {
+    name: string;   
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+  
+const studentTest = new Student("Test");
+console.log(studentTest);
