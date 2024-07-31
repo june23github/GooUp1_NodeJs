@@ -1,0 +1,9 @@
+Các trường hợp sử dụng Decorator:
+
+Logging: Để ghi log tự động cho các phương thức hoặc lớp.
+Validation: Kiểm tra tính hợp lệ của dữ liệu đầu vào.
+Dependency Injection: Tự động inject các dependencies.
+Caching: Lưu trữ kết quả của các phương thức tốn kém để tái sử dụng.
+Authorization: Kiểm tra quyền truy cập trước khi thực hiện một phương thức.
+Error Handling: Xử lý lỗi tự động cho các phương thức.
+Timing: Đo thời gian thực thi của các phương thức.
